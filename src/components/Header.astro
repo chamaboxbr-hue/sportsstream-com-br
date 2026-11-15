@@ -1,0 +1,68 @@
+---
+import { siteConfig } from '../data/siteConfig';
+
+const waUrl = `https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(siteConfig.whatsapp.defaultMessage)}`;
+---
+
+<!-- Ticker Bar -->
+<div class="bg-gradient-to-r from-sport-emerald via-sport-green to-sport-cyan text-sport-bg font-extrabold text-xs py-2 px-4 overflow-hidden shadow-inner">
+  <div class="whitespace-nowrap animate-marquee flex items-center justify-center gap-8 text-center tracking-wide">
+    <span>⚽ Brasileirão Série A & B Ao Vivo Sem Delay</span>
+    <span>•</span>
+    <span>🥊 UFC Cards Numerados em 4K</span>
+    <span>•</span>
+    <span>🏎️ Fórmula 1 com Áudio Original e 60 FPS</span>
+    <span>•</span>
+    <span>🏀 NBA Temporada Completa</span>
+    <span>•</span>
+    <span>🔥 Ativação Imediata via PIX em 3 Minutos</span>
+  </div>
+</div>
+
+<header class="sticky top-0 z-50 bg-sport-bg/90 backdrop-blur-md border-b border-sport-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-sport-green to-sport-cyan flex items-center justify-center shadow-lg shadow-sport-green/20 group-hover:scale-105 transition-transform duration-300">
+        <svg class="w-6 h-6 text-sport-bg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"/>
+          <path d="M10 9l5 3-5 3V9z" fill="#050814"/>
+        </svg>
+      </div>
+      <div>
+        <span class="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-1">
+          SPORTS<span class="text-sport-neon">STREAM</span>
+        </span>
+        <span class="text-[10px] uppercase font-bold tracking-widest text-sport-cyan block -mt-1">
+          2 Telas 4K Ultra HD
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+      <a href="/#recursos" class="hover:text-sport-neon transition-colors">Diferenciais</a>
+      <a href="/#esportes" class="hover:text-sport-neon transition-colors">Esportes Ao Vivo</a>
+      <a href="/#familia" class="hover:text-sport-neon transition-colors">Kids & Notícias</a>
+      <a href="/#planos" class="hover:text-sport-neon transition-colors">Tabela de Planos</a>
+      <a href="/#depoimentos" class="hover:text-sport-neon transition-colors">Avaliações</a>
+      <a href="/#faq" class="hover:text-sport-neon transition-colors">Dúvidas</a>
+    </nav>
+
+    <!-- Header CTA -->
+    <div class="flex items-center gap-3">
+      <a
+        href={waUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-gradient-to-r from-sport-green to-sport-emerald hover:from-sport-neon hover:to-sport-green text-sport-bg font-extrabold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl shadow-lg shadow-sport-green/25 hover:shadow-sport-neon/40 transform hover:-translate-y-0.5 transition-all duration-300"
+      >
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sport-bg opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-sport-bg"></span>
+        </span>
+        <span>TESTE GRÁTIS</span>
+      </a>
+    </div>
+  </div>
+</header>

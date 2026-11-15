@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="100%" stop-color="#0c1a2e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded box -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="106" fill="none" stroke="url(#accentGrad)" stroke-width="8" opacity="0.4"/>
+
+  <!-- Screen 1 (Back / Large) -->
+  <rect x="76" y="96" width="280" height="175" rx="20" fill="#0f1f38" stroke="url(#glowGrad)" stroke-width="8" opacity="0.8"/>
+  <rect x="180" y="271" width="72" height="18" rx="6" fill="#1b2e4b"/>
+  <rect x="146" y="289" width="140" height="10" rx="5" fill="#1b2e4b"/>
+
+  <!-- Screen 2 (Front / Overlapping) -->
+  <g filter="url(#glow)">
+    <rect x="156" y="180" width="280" height="175" rx="20" fill="#071322" stroke="url(#accentGrad)" stroke-width="10"/>
+    <rect x="260" y="355" width="72" height="18" rx="6" fill="#00ff88"/>
+    <rect x="226" y="373" width="140" height="10" rx="5" fill="#00ff88"/>
+    <!-- Play Triangle Inside Front Screen -->
+    <polygon points="275,232 275,302 335,267" fill="url(#accentGrad)"/>
+  </g>
+
+  <!-- Badge 2 TELAS -->
+  <g transform="translate(140, 410)">
+    <rect width="232" height="56" rx="28" fill="#00ff88"/>
+    <text x="116" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="900" fill="#050814" text-anchor="middle" letter-spacing="2">2 TELAS 4K</text>
+  </g>
+</svg>

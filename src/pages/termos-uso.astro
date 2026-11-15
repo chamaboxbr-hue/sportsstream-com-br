@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/siteConfig';
+---
+
+<Layout
+  title={`Termos de Uso | ${siteConfig.name}`}
+  description="Termos e condições gerais de uso dos serviços da Sports Stream Pro."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <a href="/" class="inline-flex items-center gap-2 text-sport-neon hover:underline font-bold text-sm mb-8">
+      ← Voltar para a Página Inicial
+    </a>
+
+    <h1 class="text-3xl sm:text-4xl font-black text-white mb-6">
+      Termos e Condições de Uso
+    </h1>
+    <p class="text-xs text-slate-400 mb-8">Última atualização: 15 de Novembro de 2026</p>
+
+    <div class="prose prose-invert max-w-none text-slate-300 space-y-6 text-sm sm:text-base leading-relaxed">
+      <p>
+        Bem-vindo à <strong>{siteConfig.name}</strong> ({siteConfig.domain}). Ao solicitar um teste grátis ou adquirir qualquer um de nossos planos de assinatura, você concorda expressamente com os presentes Termos de Uso.
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">1. Descrição dos Serviços</h2>
+      <p>
+        A {siteConfig.name} oferece soluções de conectividade para transmissão de conteúdos digitais (canais ao vivo, esportes, filmes e séries) via internet para dispositivos compatíveis, incluindo Smart TVs, smartphones, TV Boxes e computadores.
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">2. Telas Simultâneas e Uso do Acesso</h2>
+      <p>
+        Cada assinatura possui um limite pré-determinado de telas simultâneas:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Plano 1 Tela:</strong> Permite a reprodução em 1 dispositivo ativo por vez;</li>
+        <li><strong>Plano 2 Telas VIP:</strong> Permite a reprodução simultânea em até 2 dispositivos simultaneamente dentro do mesmo plano.</li>
+      </ul>
+      <p>
+        A tentativa de conexão além do limite contratado pode gerar interrupção temporária automática pelo sistema anti-abuso.
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">3. Requisitos de Conexão com a Internet</h2>
+      <p>
+        Para uma experiência fluida em qualidade Full HD e 4K sem travamentos, recomendamos:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Conexão de internet banda larga estável com velocidade mínima de 25 Mbps para cada tela em reprodução simultânea;</li>
+        <li>Preferência por conexão via cabo de rede (Ethernet) ou rede Wi-Fi na frequência 5 GHz em Smart TVs e TV Boxes.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">4. Planos, Pagamento e Sem Fidelidade</h2>
+      <p>
+        Nossos planos são pré-pagos e <strong>não possuem fidelidade contratual</strong> nem cláusulas de renovação compulsória com multa. Você tem total liberdade para renovar ou descontinuar o serviço a qualquer momento após o término da vigência do período contratado.
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">5. Suporte e Atendimento</h2>
+      <p>
+        Disponibilizamos canal de suporte VIP via WhatsApp oficial (<strong>{siteConfig.whatsapp.display}</strong>) todos os dias, das 08h às 23h, para auxílio em configurações, testes e dúvidas gerais.
+      </p>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,75 @@
+---
+import { siteConfig } from '../data/siteConfig';
+
+const currentYear = new Date().getFullYear();
+const waUrl = `https://wa.me/${siteConfig.whatsapp.number}?text=${encodeURIComponent(siteConfig.whatsapp.defaultMessage)}`;
+---
+
+<footer class="bg-sport-bg border-t border-sport-border pt-16 pb-12 text-slate-400">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <!-- Col 1: Brand & Slogan -->
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sport-green to-sport-cyan flex items-center justify-center">
+            <svg class="w-5 h-5 text-sport-bg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"/>
+              <path d="M10 9l5 3-5 3V9z" fill="#050814"/>
+            </svg>
+          </div>
+          <span class="text-2xl font-black text-white tracking-tight">
+            SPORTS<span class="text-sport-neon">STREAM</span>
+          </span>
+        </div>
+        <p class="text-sm text-slate-400 leading-relaxed max-w-md mb-6">
+          A melhor plataforma de IPTV com foco em esportes em 4K e 2 telas simultâneas. Transmissões ao vivo sem delay, mais de 85.000 conteúdos on demand e estabilidade anti-congelamento.
+        </p>
+        <div class="flex items-center gap-4 text-xs font-semibold text-slate-300">
+          <span class="inline-flex items-center gap-1.5 bg-sport-card border border-sport-border px-3 py-1.5 rounded-lg">
+            🔒 Pagamento Seguro PIX
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-sport-card border border-sport-border px-3 py-1.5 rounded-lg">
+            ⚡ Ativação em 3 Minutos
+          </span>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation Links -->
+      <div>
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Navegação</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/#recursos" class="hover:text-sport-neon transition-colors">Diferenciais 2 Telas</a></li>
+          <li><a href="/#esportes" class="hover:text-sport-neon transition-colors">Grade Esportiva</a></li>
+          <li><a href="/#familia" class="hover:text-sport-neon transition-colors">Kids & Notícias</a></li>
+          <li><a href="/#planos" class="hover:text-sport-neon transition-colors">Tabela de Planos</a></li>
+          <li><a href="/#depoimentos" class="hover:text-sport-neon transition-colors">Avaliações de Clientes</a></li>
+          <li><a href="/#faq" class="hover:text-sport-neon transition-colors">Perguntas Frequentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Legal & Support -->
+      <div>
+        <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Atendimento VIP</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li>
+            <a href={waUrl} target="_blank" rel="noopener noreferrer" class="text-sport-neon font-bold flex items-center gap-2 hover:underline">
+              <span>📲 WhatsApp: {siteConfig.whatsapp.display}</span>
+            </a>
+          </li>
+          <li class="text-xs text-slate-400">Atendimento diário das 08h às 23h</li>
+          <li class="pt-3"><a href="/politica-privacidade" class="hover:text-white transition-colors">Política de Privacidade</a></li>
+          <li><a href="/termos-uso" class="hover:text-white transition-colors">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="pt-8 border-t border-sport-border/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+      <p>© {currentYear} {siteConfig.name} ({siteConfig.domain}). Todos os direitos reservados.</p>
+      <p class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-sport-neon animate-pulse"></span>
+        <span>Servidores 100% Operacionais (Hostinger CDN + HTTP/3)</span>
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/siteConfig';
+---
+
+<Layout
+  title={`Política de Privacidade | ${siteConfig.name}`}
+  description="Conheça a política de privacidade e proteção de dados da Sports Stream Pro."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <a href="/" class="inline-flex items-center gap-2 text-sport-neon hover:underline font-bold text-sm mb-8">
+      ← Voltar para a Página Inicial
+    </a>
+
+    <h1 class="text-3xl sm:text-4xl font-black text-white mb-6">
+      Política de Privacidade
+    </h1>
+    <p class="text-xs text-slate-400 mb-8">Última atualização: 15 de Novembro de 2026</p>
+
+    <div class="prose prose-invert max-w-none text-slate-300 space-y-6 text-sm sm:text-base leading-relaxed">
+      <p>
+        A <strong>{siteConfig.name}</strong> ({siteConfig.domain}) tem o compromisso de proteger a privacidade e os dados pessoais de seus usuários e assinantes, em total conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">1. Dados Coletados</h2>
+      <p>
+        Coletamos apenas as informações estritamente necessárias para viabilizar a criação e o suporte de sua conta de transmissão:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Número de telefone / WhatsApp para envio de tutoriais, testes e suporte técnico;</li>
+        <li>Dados de pagamento processados de forma criptografada pelo gateway bancário via PIX ou cartão de crédito;</li>
+        <li>Registros técnicos de conexão (endereço IP, modelo do dispositivo e aplicativo utilizado) para garantir a estabilidade e proteção contra fraudes.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">2. Finalidade do Tratamento dos Dados</h2>
+      <p>
+        Seus dados são tratados exclusivamente para:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Liberação e renovação do seu acesso de IPTV em 2 telas;</li>
+        <li>Atendimento ágil através do canal de suporte no WhatsApp;</li>
+        <li>Melhoria contínua na qualidade do sinal, latência e balanceamento de carga dos servidores CDN;</li>
+        <li>Cumprimento de obrigações legais e regulatórias.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">3. Compartilhamento de Dados</h2>
+      <p>
+        A <strong>{siteConfig.name}</strong> não vende, aluga nem compartilha suas informações pessoais com terceiros para fins publicitários. O compartilhamento ocorre unicamente com os provedores essenciais para o funcionamento do serviço (ex: gateways de pagamento e operadoras de telecomunicação).
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">4. Segurança das Informações</h2>
+      <p>
+        Implementamos rigorosas medidas técnicas e administrativas de segurança, incluindo criptografia SSL/TLS de ponta a ponta, firewalls ativos e servidores protegidos em infraestrutura de alta confiabilidade.
+      </p>
+
+      <h2 class="text-xl font-bold text-white mt-8 mb-4">5. Direitos do Titular</h2>
+      <p>
+        Nos termos da LGPD, você possui o direito de confirmar a existência de tratamento, acessar seus dados, solicitar a correção de dados incompletos ou a exclusão definitiva de seus cadastros a qualquer momento através do nosso WhatsApp oficial: <strong>{siteConfig.whatsapp.display}</strong>.
+      </p>
+    </div>
+  </div>
+</Layout>

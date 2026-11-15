@@ -1,0 +1,427 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../data/siteConfig';
+
+const waBase = `https://wa.me/${siteConfig.whatsapp.number}`;
+const defaultWa = `${waBase}?text=${encodeURIComponent(siteConfig.whatsapp.defaultMessage)}`;
+---
+
+<Layout>
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+    <!-- Background Glow Orbs -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-sport-green/20 via-sport-cyan/15 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 right-10 w-[400px] h-[400px] bg-sport-blue/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-4xl mx-auto">
+        <!-- Live Alert Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sport-card border border-sport-border text-xs sm:text-sm font-bold text-sport-neon shadow-lg mb-6">
+          <span class="w-2.5 h-2.5 rounded-full bg-sport-neon animate-pulse"></span>
+          <span>TECNOLOGIA ANTI-FREEZE V4 • SERVIDORES BRASIL DEDICADOS</span>
+        </div>
+
+        <!-- Main H1 Title -->
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] mb-6">
+          IPTV <span class="bg-gradient-to-r from-sport-neon via-sport-green to-sport-cyan bg-clip-text text-transparent">2 Telas Simultâneas</span> Em 4K Ultra HD
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto mb-10">
+          Assista futebol ao vivo, UFC, Fórmula 1, NBA, filmes e séries em até <strong class="text-white">2 telas ao mesmo tempo</strong> na Smart TV, TV Box e celular. Sem travamentos e ativação imediata em 3 minutos.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <a
+            href={defaultWa}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sport-neon via-sport-green to-sport-emerald hover:brightness-110 text-sport-bg font-black text-base sm:text-lg px-8 py-4 rounded-2xl shadow-xl shadow-sport-green/30 transform hover:-translate-y-1 transition-all duration-300"
+          >
+            <span>QUERO TESTE GRÁTIS DE 4 HORAS 🚀</span>
+          </a>
+
+          <a
+            href="#planos"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sport-card hover:bg-sport-card/80 border border-sport-border text-white font-bold text-base px-8 py-4 rounded-2xl hover:border-sport-green/50 transition-all duration-300"
+          >
+            <span>VER TABELA DE PLANOS 👇</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-left">
+          <div class="bg-sport-card/70 border border-sport-border p-4 rounded-xl flex items-center gap-3">
+            <span class="text-2xl">⚡</span>
+            <div>
+              <div class="text-xs text-slate-400 font-medium">Estabilidade</div>
+              <div class="text-sm font-bold text-white">Anti-Freeze 4K</div>
+            </div>
+          </div>
+          <div class="bg-sport-card/70 border border-sport-border p-4 rounded-xl flex items-center gap-3">
+            <span class="text-2xl">📱</span>
+            <div>
+              <div class="text-xs text-slate-400 font-medium">Acesso Duplo</div>
+              <div class="text-sm font-bold text-white">2 Telas Reais</div>
+            </div>
+          </div>
+          <div class="bg-sport-card/70 border border-sport-border p-4 rounded-xl flex items-center gap-3">
+            <span class="text-2xl">⚽</span>
+            <div>
+              <div class="text-xs text-slate-400 font-medium">Esportes</div>
+              <div class="text-sm font-bold text-white">Zero Delay</div>
+            </div>
+          </div>
+          <div class="bg-sport-card/70 border border-sport-border p-4 rounded-xl flex items-center gap-3">
+            <span class="text-2xl">🔒</span>
+            <div>
+              <div class="text-xs text-slate-400 font-medium">Garantia</div>
+              <div class="text-sm font-bold text-white">PIX Seguro</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS / SEU IPTV COMPLETO -->
+  <section id="recursos" class="py-20 bg-sport-card/40 border-y border-sport-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-black tracking-widest text-sport-neon uppercase bg-sport-green/10 border border-sport-green/30 px-3.5 py-1.5 rounded-full">
+          TECNOLOGIA & VANTAGENS
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+          Por Que o Sports Stream Pro é o Melhor?
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg mt-3">
+          Projetado desde a raiz para quem não aceita perder um lance do seu time do coração ou ficar brigando pelo controle remoto.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-sport-card border border-sport-border hover:border-sport-green/50 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 group">
+          <div class="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-neon flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+            📺
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">2 Telas Simultâneas</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Assista ao futebol na sala enquanto alguém curte filmes ou séries no quarto ao mesmo tempo, sem pagar nada a mais por ponto adicional.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-sport-card border border-sport-border hover:border-sport-green/50 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 group">
+          <div class="w-14 h-14 rounded-2xl bg-sport-cyan/10 text-sport-cyan flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+            🚀
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Conteúdo Sem Travar</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Servidores CDN no Brasil com tecnologia anti-delay. Você grita gol junto com a torcida no estádio, sem atrasos nas transmissões.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-sport-card border border-sport-border hover:border-sport-green/50 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 group">
+          <div class="w-14 h-14 rounded-2xl bg-sport-amber/10 text-sport-amber flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+            📱
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Multi-Plataforma</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Funciona em Smart TV Samsung, LG, Android TV, TV Box, Fire Stick, Celulares (Android e iPhone) e computadores com instalação guiada.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-sport-card border border-sport-border hover:border-sport-green/50 p-6 rounded-2xl transition-all duration-300 hover:-translate-y-1 group">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform">
+            🍿
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Catálogo Completo</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Mais de 85.000 filmes e séries atualizados semanalmente com lançamentos de cinema e todas as produções das maiores plataformas de streaming.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESPORTES SEM LIMITES -->
+  <section id="esportes" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-black tracking-widest text-sport-neon uppercase bg-sport-green/10 border border-sport-green/30 px-3.5 py-1.5 rounded-full">
+          COBERTURA COMPLETA
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+          Esportes Sem Limites em 4K
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg mt-3">
+          Todos os canais Premiere, ESPN, SportTV, Fox Sports, DAZN, Combate e canais internacionais em uma única grade organizada.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {siteConfig.sportsCategories.map(cat => (
+          <div class="bg-sport-card border border-sport-border hover:border-sport-green/40 p-8 rounded-2xl flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-sport-green/5">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-4xl">{cat.icon}</span>
+                <span class="text-xs font-black text-sport-neon bg-sport-green/10 border border-sport-green/30 px-3 py-1 rounded-full uppercase tracking-wider">
+                  {cat.badge}
+                </span>
+              </div>
+              <h3 class="text-2xl font-black text-white mb-3">{cat.title}</h3>
+              <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+                {cat.description}
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-sport-border/60 flex items-center justify-between text-xs font-semibold text-slate-400">
+              <span class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-sport-neon"></span>
+                Transmissão 60 FPS
+              </span>
+              <a href={defaultWa} target="_blank" rel="noopener noreferrer" class="text-sport-neon hover:underline font-bold">
+                Testar ao vivo →
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- KIDS & NOTÍCIAS (DIVERSÃO FAMÍLIA) -->
+  <section id="familia" class="py-20 bg-sport-card/40 border-y border-sport-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Col 1: Kids Zone -->
+        <div>
+          <span class="text-xs font-black tracking-widest text-sport-cyan uppercase bg-sport-cyan/10 border border-sport-cyan/30 px-3.5 py-1.5 rounded-full">
+            KIDS & ANIMAÇÃO
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-white mt-4 tracking-tight">
+            Diversão Garantida Para Toda a Família!
+          </h2>
+          <p class="text-slate-400 mt-4 leading-relaxed">
+            Deixe as crianças entretidas com os melhores canais infantis e desenhos clássicos 24 horas por dia, com controle parental e som dublado em português.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mt-6">
+            <div class="bg-sport-card border border-sport-border p-4 rounded-xl">
+              <div class="text-sport-cyan font-bold text-base mb-1">👶 Desenhos 24 Horas</div>
+              <div class="text-xs text-slate-400">Turma da Mônica, Bob Esponja, Chaves e mais.</div>
+            </div>
+            <div class="bg-sport-card border border-sport-border p-4 rounded-xl">
+              <div class="text-sport-cyan font-bold text-base mb-1">🎮 Canais Infantis</div>
+              <div class="text-xs text-slate-400">Nickelodeon, Cartoon Network, Discovery Kids.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: News Zone -->
+        <div class="bg-sport-card border border-sport-border p-8 rounded-2xl">
+          <span class="text-xs font-black tracking-widest text-sport-amber uppercase bg-sport-amber/10 border border-sport-amber/30 px-3.5 py-1.5 rounded-full">
+            NOTÍCIAS 24H
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-black text-white mt-4 tracking-tight">
+            Fique Sempre Bem Informado
+          </h3>
+          <p class="text-slate-400 text-sm mt-2 mb-6">
+            Principais telejornais do Brasil e do mundo com transmissão em tempo real.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 text-sm font-bold text-white">
+            <div class="bg-sport-bg/60 border border-sport-border/80 px-4 py-3 rounded-lg flex items-center gap-2">
+              <span class="text-red-500 font-black">🔴</span> Globo News
+            </div>
+            <div class="bg-sport-bg/60 border border-sport-border/80 px-4 py-3 rounded-lg flex items-center gap-2">
+              <span class="text-blue-500 font-black">🔴</span> Record News
+            </div>
+            <div class="bg-sport-bg/60 border border-sport-border/80 px-4 py-3 rounded-lg flex items-center gap-2">
+              <span class="text-yellow-500 font-black">🔴</span> Band News
+            </div>
+            <div class="bg-sport-bg/60 border border-sport-border/80 px-4 py-3 rounded-lg flex items-center gap-2">
+              <span class="text-red-600 font-black">🔴</span> CNN Brasil
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABELA DE PLANOS -->
+  <section id="planos" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-black tracking-widest text-sport-neon uppercase bg-sport-green/10 border border-sport-green/30 px-3.5 py-1.5 rounded-full">
+          PLANOS SEM FIDELIDADE
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+          Escolha Seu Plano IPTV
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg mt-3">
+          Sem contratos de longo prazo, sem multas e com ativação imediata via PIX em até 3 minutos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {siteConfig.plans.map(plan => {
+          const planWa = `${waBase}?text=${encodeURIComponent(siteConfig.whatsapp.planMessage(plan.name, plan.priceFormatted))}`;
+          return (
+            <div class={`relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 ${
+              plan.popular
+                ? 'bg-gradient-to-b from-sport-card to-sport-bg border-2 border-sport-neon shadow-2xl shadow-sport-green/20 scale-105 z-10'
+                : 'bg-sport-card border border-sport-border hover:border-sport-border/80'
+            }`}>
+              {plan.badge && (
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                  <span class="bg-gradient-to-r from-sport-neon to-sport-green text-sport-bg text-[11px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg">
+                    {plan.badge}
+                  </span>
+                </div>
+              )}
+
+              <div>
+                <h3 class="text-xl font-black text-white mb-2">{plan.name}</h3>
+                <p class="text-xs text-slate-400 mb-5 min-h-[36px]">{plan.description}</p>
+
+                <div class="mb-6 pb-6 border-b border-sport-border/60">
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-3xl sm:text-4xl font-black text-white">{plan.priceFormatted}</span>
+                    <span class="text-sm font-semibold text-slate-400">{plan.period}</span>
+                  </div>
+                  {plan.monthlyEquivalent && (
+                    <div class="text-xs font-bold text-sport-neon mt-1">
+                      Equivalente a {plan.monthlyEquivalent}
+                    </div>
+                  )}
+                </div>
+
+                <ul class="space-y-3 mb-8 text-xs sm:text-sm text-slate-300">
+                  {plan.features.map(f => (
+                    <li class="flex items-start gap-2.5">
+                      <svg class="w-4 h-4 text-sport-neon shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={planWa}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`w-full inline-flex items-center justify-center font-black text-sm py-3.5 px-4 rounded-xl shadow-lg transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-sport-neon to-sport-green hover:brightness-110 text-sport-bg shadow-sport-green/30'
+                    : 'bg-sport-card hover:bg-sport-border/60 border border-sport-border text-white'
+                }`}
+              >
+                ASSINAR AGORA 🚀
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS (SOCIAL PROOF) -->
+  <section id="depoimentos" class="py-20 bg-sport-card/40 border-y border-sport-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-black tracking-widest text-sport-amber uppercase bg-sport-amber/10 border border-sport-amber/30 px-3.5 py-1.5 rounded-full">
+          AVALIAÇÃO 4.9 DE 5 ESTRELAS
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 tracking-tight">
+          O Que Nossos Clientes Dizem
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg mt-3">
+          Mais de 1.840 clientes ativos assistindo em 2 telas sem complicações.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {siteConfig.testimonials.map(item => (
+          <div class="bg-sport-card border border-sport-border p-7 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-sport-amber mb-4">
+                <span>⭐⭐⭐⭐⭐</span>
+              </div>
+              <p class="text-sm text-slate-300 leading-relaxed italic mb-6">
+                "{item.comment}"
+              </p>
+            </div>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-sport-border/60">
+              <img src={item.avatar} alt={item.name} class="w-11 h-11 rounded-full object-cover border-2 border-sport-green" loading="lazy" />
+              <div>
+                <div class="text-sm font-bold text-white">{item.name}</div>
+                <div class="text-xs text-slate-400">{item.location} • {item.role}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-black tracking-widest text-sport-cyan uppercase bg-sport-cyan/10 border border-sport-cyan/30 px-3.5 py-1.5 rounded-full">
+          TIRE SUAS DÚVIDAS
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-4 tracking-tight">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        {siteConfig.faq.map((item, index) => (
+          <details class="group bg-sport-card border border-sport-border rounded-2xl overflow-hidden transition-all duration-300">
+            <summary class="flex items-center justify-between p-6 cursor-pointer text-base sm:text-lg font-bold text-white hover:text-sport-neon select-none">
+              <span>{item.question}</span>
+              <span class="text-sport-neon transition-transform duration-300 group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <div class="px-6 pb-6 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-sport-border/40 pt-4">
+              {item.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL BANNER CTA -->
+  <section class="py-16 bg-gradient-to-r from-sport-card via-sport-bg to-sport-card border-t border-sport-border relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <span class="text-xs font-black tracking-widest text-sport-neon uppercase bg-sport-green/10 border border-sport-green/30 px-3.5 py-1.5 rounded-full">
+        SUPORTE VIP NO WHATSAPP
+      </span>
+      <h2 class="text-3xl sm:text-5xl font-black text-white mt-4 mb-4 tracking-tight">
+        Pronto Para Assistir em 2 Telas em 4K?
+      </h2>
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+        Faça seu teste grátis agora mesmo de 4 horas sem pagar nada. Se gostar, ative seu plano em menos de 3 minutos via PIX.
+      </p>
+
+      <a
+        href={defaultWa}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-3 bg-gradient-to-r from-sport-neon via-sport-green to-sport-emerald hover:brightness-110 text-sport-bg font-black text-base sm:text-lg px-9 py-4 rounded-2xl shadow-2xl shadow-sport-green/30 transform hover:scale-105 transition-all duration-300"
+      >
+        <span>SOLICITAR TESTE GRÁTIS NO WHATSAPP 📲</span>
+      </a>
+    </div>
+  </section>
+</Layout>
