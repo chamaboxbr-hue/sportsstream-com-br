@@ -15,52 +15,44 @@ const {
 } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, siteConfig.siteUrl);
----
 
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalUrl} />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:site_name" content={siteConfig.name} />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#050814" />
-
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
+// Schema.org Unified Graph
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteConfig.siteUrl}/#organization`,
+      "name": siteConfig.name,
+      "url": siteConfig.siteUrl,
+      "logo": `${siteConfig.siteUrl}/favicon.svg`,
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": `+${siteConfig.whatsapp.number}`,
+        "contactType": "customer service",
+        "areaServed": "BR",
+        "availableLanguage": "Portuguese"
+      }
+    },
+    {
       "@type": "WebSite",
+      "@id": `${siteConfig.siteUrl}/#website`,
       "name": siteConfig.name,
       "url": siteConfig.siteUrl,
       "description": siteConfig.description,
+      "publisher": { "@id": `${siteConfig.siteUrl}/#organization` },
+      "inLanguage": "pt-BR",
       "potentialAction": {
         "@type": "SearchAction",
         "target": `${siteConfig.siteUrl}/#planos`,
         "query-input": "required name=search_term_string"
       }
-    })} />
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
+    },
+    {
       "@type": "Product",
+      "@id": `${siteConfig.siteUrl}/#product`,
       "name": "Sports Stream Pro - Assinatura IPTV 2 Telas 4K",
-      "description": "Acesso a mais de 2.500 canais ao vivo, futebol, UFC, Fórmula 1, NBA e 85.000 conteúdos on demand em até 2 telas simultâneas.",
+      "description": "Acesso a mais de 2.500 canais ao vivo, futebol, UFC, Fórmula 1, NBA e 85.000 conteúdos on demand em até 2 telas simultâneas em 4K Ultra HD.",
       "brand": {
         "@type": "Brand",
         "name": siteConfig.name
@@ -77,9 +69,62 @@ const canonicalUrl = new URL(Astro.url.pathname, siteConfig.siteUrl);
         "priceCurrency": "BRL",
         "lowPrice": "25.00",
         "highPrice": "240.00",
-        "offerCount": "4"
+        "offerCount": "4",
+        "offers": siteConfig.plans.map(p => ({
+          "@type": "Offer",
+          "name": p.name,
+          "price": `${p.price}.00`,
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock",
+          "url": `${siteConfig.siteUrl}/#planos`
+        }))
       }
-    })} />
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteConfig.siteUrl}/#faq`,
+      "mainEntity": siteConfig.faq.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#050814" />
+
+    <!-- Schema.org JSON-LD Unified Graph -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
   </head>
   <body class="bg-sport-bg text-slate-100 font-sans antialiased selection:bg-sport-neon selection:text-sport-bg">
     <Header />

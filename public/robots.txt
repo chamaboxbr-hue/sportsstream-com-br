@@ -1,4 +1,30 @@
 User-agent: *
 Allow: /
 
+# Motores de Busca Principais
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Motores de IA e Busca Generativa (GEO / AIO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://sportsstream.com.br/sitemap.xml
